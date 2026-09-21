@@ -1,10 +1,12 @@
+/* =========================================================
+   FONTS
+========================================================= */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap');
 
 
 /* =========================================================
-   ROOT
+   ROOT VARIABLES
 ========================================================= */
-
 :root {
   --cream: #fcf7ed;
   --cream-2: #fbf4e9;
@@ -47,7 +49,6 @@
 /* =========================================================
    RESET
 ========================================================= */
-
 * {
   box-sizing: border-box;
 }
@@ -59,14 +60,11 @@ html {
 
 body {
   margin: 0;
-
   background: var(--cream);
   color: var(--text);
-
   font-family: var(--font-body);
   font-size: 15px;
   line-height: 1.72;
-
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -89,7 +87,6 @@ button {
 /* =========================================================
    CONTAINER
 ========================================================= */
-
 .container {
   width: min(calc(100% - 48px), var(--container));
   margin-inline: auto;
@@ -99,115 +96,82 @@ button {
 /* =========================================================
    HEADER
 ========================================================= */
-
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-
   background: rgba(252, 247, 237, 0.94);
-
   border-bottom: 1px solid rgba(166, 124, 82, 0.12);
-
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 }
 
 .header-inner {
   min-height: 76px;
-
   display: flex;
   align-items: center;
-
   gap: 28px;
 }
 
-
-/* -------------------------
-   Brand
-------------------------- */
-
+/* Brand */
 .brand {
   display: flex;
   align-items: center;
-
   gap: 13px;
-
   min-width: 260px;
 }
 
 .brand-logo-wrap {
   width: 50px;
   height: 50px;
-
   flex: 0 0 50px;
-
   display: grid;
   place-items: center;
-
   overflow: hidden;
-
   border-radius: 11px;
-
   background: #fcf7ed;
 }
 
 .brand-logo {
   width: 50px;
   height: 50px;
-
   object-fit: cover;
 }
 
 .brand-info {
   display: flex;
   flex-direction: column;
-
   line-height: 1.08;
 }
 
 .brand-name {
   font-family: var(--font-display);
-
   font-size: 20px;
   font-weight: 700;
-
   letter-spacing: -0.04em;
 }
 
 .brand-subtitle {
   margin-top: 6px;
-
   color: #7d746b;
-
   font-size: 9px;
   font-weight: 500;
 }
 
-
-/* -------------------------
-   Header Navigation
-------------------------- */
-
+/* Header Navigation */
 .header-nav {
   display: flex;
   align-items: center;
-
   gap: 36px;
-
   margin-left: auto;
 }
 
 .header-nav a {
   position: relative;
-
   padding: 29px 0 25px;
-
   color: #45403b;
-
   font-size: 13px;
   font-weight: 500;
-
   transition: 0.2s ease;
 }
 
@@ -218,81 +182,49 @@ button {
 
 .header-nav a.active::after {
   content: "";
-
   position: absolute;
-
   left: 0;
   right: 0;
-
   bottom: 15px;
-
   height: 2px;
-
   background: var(--brown-dark);
-
   border-radius: 10px;
 }
 
-
-/* -------------------------
-   Download Button
-------------------------- */
-
+/* Download Button */
 .download-btn,
 .footer-download {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   gap: 8px;
-
   border-radius: 10px;
-
   color: #fff;
-
   font-size: 12px;
   font-weight: 600;
-
-  background:
-    linear-gradient(
-      135deg,
-      #855321,
-      #5d3518
-    );
-
-  box-shadow:
-    0 9px 22px rgba(84, 48, 19, 0.20);
-
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  background: linear-gradient(135deg, #855321, #5d3518);
+  box-shadow: 0 9px 22px rgba(84, 48, 19, 0.20);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .download-btn {
   margin-left: 4px;
-
   padding: 12px 18px;
 }
 
 .download-btn:hover,
 .footer-download:hover {
   transform: translateY(-2px);
-
-  box-shadow:
-    0 13px 28px rgba(84, 48, 19, 0.27);
+  box-shadow: 0 13px 28px rgba(84, 48, 19, 0.27);
 }
 
 .download-btn svg,
 .footer-download svg {
   width: 16px;
   height: 16px;
-
   fill: none;
-
   stroke: currentColor;
-
   stroke-width: 1.8;
-
   stroke-linecap: round;
   stroke-linejoin: round;
 }
@@ -301,128 +233,78 @@ button {
 /* =========================================================
    HERO
 ========================================================= */
-
 .hero {
   position: relative;
-
   overflow: hidden;
-
   background:
-    radial-gradient(
-      circle at 73% 42%,
-      rgba(231, 210, 183, 0.30),
-      transparent 24%
-    ),
-    linear-gradient(
-      115deg,
-      #fcf7ed 0%,
-      #fbf5eb 58%,
-      #f7efe3 100%
-    );
-
-  border-bottom:
-    1px solid rgba(166, 124, 82, 0.10);
+    radial-gradient(circle at 73% 42%, rgba(231, 210, 183, 0.30), transparent 24%),
+    linear-gradient(115deg, #fcf7ed 0%, #fbf5eb 58%, #f7efe3 100%);
+  border-bottom: 1px solid rgba(166, 124, 82, 0.10);
 }
 
 .hero::after {
   content: "";
-
   position: absolute;
-
   width: 260px;
   height: 260px;
-
   right: 6%;
   top: 15%;
-
   border-radius: 50%;
-
-  background:
-    rgba(222, 197, 163, 0.10);
-
+  background: rgba(222, 197, 163, 0.10);
   filter: blur(4px);
-
   pointer-events: none;
 }
 
 .hero-inner {
   min-height: 342px;
-
   display: grid;
-
-  grid-template-columns:
-    1.15fr
-    0.85fr;
-
+  grid-template-columns: 1.15fr 0.85fr;
   align-items: center;
-
   gap: 55px;
-
   padding: 48px 0 52px;
 }
 
 .hero-content {
   position: relative;
-
   z-index: 1;
-
   max-width: 690px;
 }
 
 .eyebrow {
   display: inline-flex;
   align-items: center;
-
   padding: 6px 13px;
-
   border-radius: 999px;
-
   background: #f0e2cf;
-
   color: #7d4e27;
-
   font-size: 10px;
   font-weight: 700;
-
   letter-spacing: 0.12em;
 }
 
 .hero h1 {
   margin: 17px 0 12px;
-
   font-family: var(--font-display);
-
   font-size: 50px;
-
   line-height: 1.10;
-
   letter-spacing: -0.055em;
-
   font-weight: 700;
 }
 
 .hero-description {
   max-width: 625px;
-
   margin: 0;
-
   color: #716960;
-
   font-size: 15px;
-
   line-height: 1.75;
 }
 
 .updated-date {
   display: flex;
   align-items: center;
-
   gap: 9px;
-
   margin-top: 22px;
-
   color: #704a2b;
-
   font-size: 12px;
   font-weight: 600;
 }
@@ -446,38 +328,24 @@ button {
   stroke-linejoin: round;
 }
 
-
-/* -------------------------
-   Hero Visual
-------------------------- */
-
+/* Hero Visual */
 .hero-visual {
   position: relative;
-
   z-index: 1;
-
   min-height: 245px;
-
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   gap: 22px;
 }
 
 .hero-logo-orb {
   width: 220px;
   height: 220px;
-
   display: grid;
   place-items: center;
-
   border-radius: 38px;
-
-  background:
-    rgba(255, 255, 255, 0.48);
-
+  background: rgba(255, 255, 255, 0.48);
   box-shadow:
     0 18px 45px rgba(92, 58, 29, 0.08),
     inset 0 0 0 1px rgba(255, 255, 255, 0.65);
@@ -486,43 +354,27 @@ button {
 .hero-logo-orb img {
   width: 190px;
   height: 190px;
-
   object-fit: cover;
 }
 
 .hero-script {
   position: relative;
-
   color: #7d4b25;
-
-  font-family:
-    'Segoe Script',
-    'Brush Script MT',
-    cursive;
-
+  font-family: 'Segoe Script', 'Brush Script MT', cursive;
   font-size: 27px;
-
   line-height: 1.05;
-
   font-style: italic;
-
   transform: rotate(-5deg);
-
   white-space: nowrap;
 }
 
 .hero-script span {
   display: block;
-
   width: 88px;
   height: 2px;
-
   margin: 11px 0 0 2px;
-
   background: #7d4b25;
-
   border-radius: 99px;
-
   transform: rotate(-5deg);
 }
 
@@ -530,19 +382,12 @@ button {
 /* =========================================================
    MAIN LAYOUT
 ========================================================= */
-
 .main-layout {
   display: grid;
-
-  grid-template-columns:
-    245px
-    minmax(0, 1fr);
-
+  grid-template-columns: 245px minmax(0, 1fr);
   gap: 25px;
-
   padding-top: 42px;
   padding-bottom: 76px;
-
   align-items: start;
 }
 
@@ -550,44 +395,26 @@ button {
 /* =========================================================
    SIDEBAR
 ========================================================= */
-
 .sidebar {
   position: sticky;
-
   top: 95px;
 }
 
-
-/* -------------------------
-   Table of Contents
-------------------------- */
-
+/* Table of Contents */
 .toc-card {
-  background:
-    rgba(255, 255, 255, 0.76);
-
-  border:
-    1px solid var(--border);
-
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid var(--border);
   border-radius: 17px;
-
   padding: 19px 16px;
-
-  box-shadow:
-    0 5px 18px rgba(75, 48, 26, 0.025);
+  box-shadow: 0 5px 18px rgba(75, 48, 26, 0.025);
 }
 
 .toc-heading {
   margin: 0 0 13px;
-
   padding: 0 3px;
-
   font-family: var(--font-display);
-
   font-size: 15px;
-
   font-weight: 700;
-
   letter-spacing: -0.02em;
 }
 
@@ -597,115 +424,77 @@ button {
 
 .toc-card nav {
   display: flex;
-
   flex-direction: column;
-
   gap: 2px;
 }
 
 .toc-card nav a {
   position: relative;
-
   padding: 8px 9px 8px 12px;
-
   border-radius: 8px;
-
   color: #716960;
-
   font-size: 11.2px;
-
   line-height: 1.38;
-
   transition: 0.2s ease;
 }
 
 .toc-card nav a:hover,
 .toc-card nav a:focus {
   background: #f7eee1;
-
   color: #6e421e;
 }
 
 .toc-card nav a:hover::before {
   content: "";
-
   position: absolute;
-
   left: 0;
-
   top: 7px;
   bottom: 7px;
-
   width: 2px;
-
   border-radius: 99px;
-
   background: var(--brown-dark);
 }
 
-
-/* -------------------------
-   Privacy Card
-------------------------- */
-
+/* Privacy Card */
 .privacy-card {
   display: flex;
   align-items: flex-start;
-
   gap: 11px;
-
   margin-top: 14px;
-
   padding: 16px 14px;
-
-  border:
-    1px solid #ead8bd;
-
+  border: 1px solid #ead8bd;
   border-radius: 15px;
-
   background: #f8ebd8;
 }
 
 .privacy-card-icon {
   width: 39px;
   height: 39px;
-
   flex: 0 0 39px;
-
   display: grid;
   place-items: center;
-
   overflow: hidden;
-
   border-radius: 10px;
-
   background: #fff5e7;
 }
 
 .privacy-card-icon img {
   width: 39px;
   height: 39px;
-
   object-fit: cover;
 }
 
 .privacy-card h3 {
   margin: 0 0 4px;
-
   font-family: var(--font-display);
-
   font-size: 11px;
-
   font-weight: 700;
 }
 
 .privacy-card p {
   margin: 0;
-
   color: #746b61;
-
   font-size: 9.5px;
-
   line-height: 1.5;
 }
 
@@ -713,75 +502,38 @@ button {
 /* =========================================================
    POLICY CONTENT
 ========================================================= */
-
 .policy-content {
   min-width: 0;
 }
 
-
-/* -------------------------
-   Policy Section
-------------------------- */
-
+/* Policy Section */
 .policy-section {
   position: relative;
-
   display: grid;
-
-  grid-template-columns:
-    38px
-    minmax(0, 1fr);
-
+  grid-template-columns: 38px minmax(0, 1fr);
   gap: 15px;
-
   margin-bottom: 16px;
-
   padding: 30px 31px 31px;
-
   background: var(--white);
-
-  border:
-    1px solid var(--border);
-
+  border: 1px solid var(--border);
   border-radius: 18px;
-
-  box-shadow:
-    0 5px 20px rgba(80, 50, 25, 0.025);
-
+  box-shadow: 0 5px 20px rgba(80, 50, 25, 0.025);
   scroll-margin-top: 92px;
 }
 
-
-/* -------------------------
-   Section Number
-------------------------- */
-
+/* Section Number Circle */
 .section-number {
   width: 36px;
   height: 36px;
-
   display: grid;
   place-items: center;
-
   border-radius: 50%;
-
-  background:
-    linear-gradient(
-      145deg,
-      #b18358,
-      #8e5e31
-    );
-
+  background: linear-gradient(145deg, #b18358, #8e5e31);
   color: #fff;
-
   font-family: var(--font-display);
-
   font-size: 14px;
-
   font-weight: 700;
-
   line-height: 1;
-
   box-shadow:
     inset 0 0 0 1px rgba(255, 255, 255, 0.10),
     0 6px 15px rgba(117, 72, 32, 0.14);
@@ -791,39 +543,22 @@ button {
   min-width: 0;
 }
 
-
-/* -------------------------
-   Headings
-------------------------- */
-
+/* Headings */
 .policy-section h2 {
   margin: 0 0 12px;
-
   color: #17120e;
-
   font-family: var(--font-display);
-
   font-size: 22px;
-
   line-height: 1.30;
-
   letter-spacing: -0.035em;
-
   font-weight: 700;
 }
 
-
-/* -------------------------
-   Paragraph
-------------------------- */
-
+/* Paragraphs */
 .policy-section p {
   margin: 0 0 15px;
-
   color: #5f5851;
-
   font-size: 13.5px;
-
   line-height: 1.85;
 }
 
@@ -834,170 +569,84 @@ button {
 
 /* =========================================================
    INFORMATION CARDS
-   Professional Content-Based Icons
 ========================================================= */
-
 .info-card {
   position: relative;
-
   display: flex;
   align-items: flex-start;
-
   gap: 16px;
-
   margin: 12px 0;
-
   padding: 16px 17px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #fffdfa 0%,
-      #fffaf3 100%
-    );
-
-  border:
-    1px solid #eadfce;
-
+  background: linear-gradient(145deg, #fffdfa 0%, #fffaf3 100%);
+  border: 1px solid #eadfce;
   border-radius: 15px;
-
-  box-shadow:
-    0 3px 12px rgba(82, 51, 25, 0.035);
-
-  transition:
-    transform 0.22s ease,
-    border-color 0.22s ease,
-    box-shadow 0.22s ease;
+  box-shadow: 0 3px 12px rgba(82, 51, 25, 0.035);
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
 }
-
-
-/* -------------------------
-   Card Hover
-------------------------- */
 
 .info-card:hover {
   transform: translateY(-2px);
-
   border-color: #dcc5a6;
-
-  box-shadow:
-    0 10px 26px rgba(82, 51, 25, 0.075);
+  box-shadow: 0 10px 26px rgba(82, 51, 25, 0.075);
 }
-
-
-/* -------------------------
-   Icon Container
-------------------------- */
 
 .info-icon {
   width: 48px;
   height: 48px;
-
   min-width: 48px;
-
   flex: 0 0 48px;
-
   display: grid;
   place-items: center;
-
   position: relative;
-
   border-radius: 13px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #fff5e8 0%,
-      #f8ead8 100%
-    );
-
-  border:
-    1px solid rgba(166, 124, 82, 0.18);
-
+  background: linear-gradient(145deg, #fff5e8 0%, #f8ead8 100%);
+  border: 1px solid rgba(166, 124, 82, 0.18);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.85),
     0 4px 10px rgba(116, 72, 32, 0.055);
 }
 
-
-/* -------------------------
-   Inner Ring
-------------------------- */
-
 .info-icon::after {
   content: "";
-
   position: absolute;
-
   inset: 5px;
-
   border-radius: 10px;
-
-  border:
-    1px solid rgba(166, 124, 82, 0.08);
-
+  border: 1px solid rgba(166, 124, 82, 0.08);
   pointer-events: none;
 }
 
-
-/* -------------------------
-   SVG Icons
-------------------------- */
-
 .info-icon svg {
   position: relative;
-
   z-index: 1;
-
   width: 25px;
   height: 25px;
-
   fill: none;
-
   stroke: #8a562a;
-
   stroke-width: 1.75;
-
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
-
-/* -------------------------
-   Information Content
-------------------------- */
-
 .info-content {
   min-width: 0;
-
   flex: 1;
 }
 
 .info-card h3 {
   margin: 1px 0 5px;
-
   color: #70451f;
-
   font-family: var(--font-display);
-
   font-size: 13px;
-
   font-weight: 700;
-
   line-height: 1.4;
-
   letter-spacing: -0.015em;
 }
 
 .info-card p {
   margin: 0;
-
   color: #5f5851;
-
   font-family: var(--font-body);
-
   font-size: 12.5px;
-
   line-height: 1.68;
 }
 
@@ -1009,43 +658,28 @@ button {
 /* =========================================================
    PLACEHOLDER
 ========================================================= */
-
 .placeholder-text {
   color: #a96426 !important;
-
   background: #fff4e5;
-
   border-radius: 8px;
-
   padding: 12px 13px;
 }
 
 .info-card .placeholder-text {
   margin-top: 10px;
-
   padding: 11px 12px;
-
   color: #9b6128 !important;
-
   background: #fff4e5;
-
-  border:
-    1px solid #f0ddc2;
-
+  border: 1px solid #f0ddc2;
   border-radius: 9px;
-
   font-size: 12px;
-
   line-height: 1.65;
 }
 
 .placeholder-list-item {
   color: #a96426;
-
   background: #fff4e5;
-
   border-radius: 8px;
-
   padding: 9px 10px 9px 12px !important;
 }
 
@@ -1053,22 +687,16 @@ button {
 /* =========================================================
    POLICY LIST
 ========================================================= */
-
 .policy-list {
   margin: 5px 0 18px;
-
   padding-left: 22px;
-
   color: #5f5851;
 }
 
 .policy-list li {
   margin: 9px 0;
-
   padding-left: 3px;
-
   font-size: 13.5px;
-
   line-height: 1.7;
 }
 
@@ -1080,23 +708,14 @@ button {
 /* =========================================================
    NOTICE BOX
 ========================================================= */
-
 .notice-box {
   margin-top: 15px;
-
   padding: 13px 16px;
-
-  border-left:
-    3px solid var(--brown);
-
+  border-left: 3px solid var(--brown);
   border-radius: 7px;
-
   background: #f7ead7;
-
   color: #72502f;
-
   font-size: 12.5px;
-
   line-height: 1.6;
 }
 
@@ -1104,64 +723,46 @@ button {
 /* =========================================================
    CONTACT CARD
 ========================================================= */
-
 .contact-card {
   display: flex;
   align-items: flex-start;
-
   gap: 16px;
-
   padding: 19px;
-
-  border:
-    1px solid #e8d4b6;
-
+  border: 1px solid #e8d4b6;
   border-radius: 15px;
-
   background: #fbf1e2;
 }
 
 .contact-logo {
   width: 64px;
   height: 64px;
-
   flex: 0 0 64px;
-
   overflow: hidden;
-
   border-radius: 14px;
-
   background: #fff7ea;
 }
 
 .contact-logo img {
   width: 64px;
   height: 64px;
-
   object-fit: cover;
 }
 
 .contact-content h3 {
   margin: 0 0 8px;
-
   color: #70451f;
-
   font-family: var(--font-display);
-
   font-size: 15px;
 }
 
 .contact-content p {
   margin: 5px 0;
-
   font-size: 12.5px;
-
   line-height: 1.65;
 }
 
 .contact-content a {
   color: #815128;
-
   font-weight: 600;
 }
 
@@ -1169,126 +770,76 @@ button {
 /* =========================================================
    FOOTER
 ========================================================= */
-
 .site-footer {
   background:
-    radial-gradient(
-      circle at 75% 0%,
-      rgba(139, 87, 39, 0.14),
-      transparent 30%
-    ),
-    linear-gradient(
-      145deg,
-      #2b1b12,
-      #20130d
-    );
-
+    radial-gradient(circle at 75% 0%, rgba(139, 87, 39, 0.14), transparent 30%),
+    linear-gradient(145deg, #2b1b12, #20130d);
   color: #fff;
-
   padding: 31px 0 20px;
 }
 
 .footer-main {
   min-height: 76px;
-
   display: grid;
-
-  grid-template-columns:
-    1fr
-    auto
-    auto;
-
+  grid-template-columns: 1fr auto auto;
   align-items: center;
-
   gap: 45px;
-
   padding-bottom: 25px;
-
-  border-bottom:
-    1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-
-/* -------------------------
-   Footer Brand
-------------------------- */
-
+/* Footer Brand */
 .footer-brand {
   display: flex;
   align-items: center;
-
   gap: 13px;
 }
 
 .footer-logo-wrap {
   width: 48px;
   height: 48px;
-
   flex: 0 0 48px;
-
   overflow: hidden;
-
   border-radius: 10px;
-
   background: #fcf7ed;
 }
 
 .footer-logo-wrap img {
   width: 48px;
   height: 48px;
-
   object-fit: cover;
 }
 
 .footer-brand strong {
   display: block;
-
   font-family: var(--font-display);
-
   font-size: 15px;
-
   font-weight: 700;
-
   line-height: 1.15;
 }
 
 .footer-brand span {
   display: block;
-
   margin-top: 4px;
-
   color: #c9bdb3;
-
   font-size: 10px;
-
   line-height: 1.25;
 }
 
 .footer-brand small {
   display: block;
-
   margin-top: 3px;
-
   color: #968a80;
-
   font-size: 8.5px;
-
   line-height: 1.2;
 }
 
-
-/* -------------------------
-   Footer Navigation
-------------------------- */
-
+/* Footer Navigation */
 .footer-nav {
   display: flex;
   align-items: center;
-
   gap: 30px;
-
   color: #e2d9d1;
-
   font-size: 11px;
 }
 
@@ -1304,28 +855,19 @@ button {
   padding: 11px 17px;
 }
 
-
-/* -------------------------
-   Footer Bottom
-------------------------- */
-
+/* Footer Bottom */
 .footer-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 25px;
-
   padding-top: 16px;
-
   color: #9d9188;
-
   font-size: 10px;
 }
 
 .footer-bottom div {
   display: flex;
-
   gap: 25px;
 }
 
@@ -1337,9 +879,7 @@ button {
 /* =========================================================
    RESPONSIVE — TABLET
 ========================================================= */
-
 @media (max-width: 1050px) {
-
   .header-nav {
     gap: 25px;
   }
@@ -1349,10 +889,7 @@ button {
   }
 
   .hero-inner {
-    grid-template-columns:
-      1fr
-      0.8fr;
-
+    grid-template-columns: 1fr 0.8fr;
     gap: 30px;
   }
 
@@ -1375,20 +912,12 @@ button {
 /* =========================================================
    RESPONSIVE — MOBILE / SMALL TABLET
 ========================================================= */
-
 @media (max-width: 900px) {
-
   .container {
-    width:
-      min(
-        calc(100% - 32px),
-        var(--container)
-      );
+    width: min(calc(100% - 32px), var(--container));
   }
 
-
   /* Header */
-
   .header-nav {
     display: none;
   }
@@ -1397,46 +926,33 @@ button {
     margin-left: auto;
   }
 
-
   /* Hero */
-
   .hero-inner {
     grid-template-columns: 1fr;
-
     gap: 30px;
-
     padding: 42px 0 45px;
   }
 
   .hero-visual {
     justify-content: flex-start;
-
     min-height: auto;
   }
 
-
   /* Main */
-
   .main-layout {
     grid-template-columns: 1fr;
-
     gap: 18px;
-
     padding-top: 25px;
   }
 
-
   /* Sidebar */
-
   .sidebar {
     position: static;
-
     order: -1;
   }
 
   .toc-card {
     padding: 0;
-
     overflow: hidden;
   }
 
@@ -1446,42 +962,27 @@ button {
 
   .toc-toggle {
     width: 100%;
-
     display: flex;
-
     align-items: center;
     justify-content: space-between;
-
     padding: 16px 17px;
-
     border: 0;
-
     background: transparent;
-
     color: #17120e;
-
     font-family: var(--font-display);
-
     font-size: 13px;
-
     font-weight: 700;
-
     cursor: pointer;
   }
 
   .toc-toggle svg {
     width: 18px;
     height: 18px;
-
     fill: none;
-
     stroke: #6f4a2c;
-
     stroke-width: 1.8;
-
     stroke-linecap: round;
     stroke-linejoin: round;
-
     transition: 0.2s;
   }
 
@@ -1491,7 +992,6 @@ button {
 
   .toc-card nav {
     display: none;
-
     padding: 0 12px 12px;
   }
 
@@ -1503,20 +1003,14 @@ button {
     display: none;
   }
 
-
   /* Footer */
-
   .footer-main {
-    grid-template-columns:
-      1fr
-      auto;
+    grid-template-columns: 1fr auto;
   }
 
   .footer-nav {
     order: 3;
-
     grid-column: 1 / -1;
-
     justify-content: center;
   }
 }
@@ -1525,33 +1019,22 @@ button {
 /* =========================================================
    RESPONSIVE — MOBILE
 ========================================================= */
-
 @media (max-width: 620px) {
-
   body {
     font-size: 14px;
   }
 
   .container {
-    width:
-      min(
-        calc(100% - 24px),
-        var(--container)
-      );
+    width: min(calc(100% - 24px), var(--container));
   }
 
-
-  /* -------------------------
-     Header
-  ------------------------- */
-
+  /* Header */
   .header-inner {
     min-height: 65px;
   }
 
   .brand {
     gap: 9px;
-
     min-width: 0;
   }
 
@@ -1559,7 +1042,6 @@ button {
   .brand-logo {
     width: 42px;
     height: 42px;
-
     flex-basis: 42px;
   }
 
@@ -1573,7 +1055,6 @@ button {
 
   .download-btn {
     padding: 9px 11px;
-
     font-size: 10px;
   }
 
@@ -1586,11 +1067,7 @@ button {
     display: none;
   }
 
-
-  /* -------------------------
-     Hero
-  ------------------------- */
-
+  /* Hero */
   .hero-inner {
     padding: 30px 0 35px;
   }
@@ -1601,7 +1078,6 @@ button {
 
   .hero-description {
     font-size: 13px;
-
     line-height: 1.7;
   }
 
@@ -1612,7 +1088,6 @@ button {
   .hero-logo-orb {
     width: 145px;
     height: 145px;
-
     border-radius: 24px;
   }
 
@@ -1629,36 +1104,22 @@ button {
     width: 60px;
   }
 
-
-  /* -------------------------
-     Main
-  ------------------------- */
-
+  /* Main */
   .main-layout {
     padding-bottom: 40px;
   }
 
-
-  /* -------------------------
-     Policy Sections
-  ------------------------- */
-
+  /* Policy Sections */
   .policy-section {
-    grid-template-columns:
-      31px
-      minmax(0, 1fr);
-
+    grid-template-columns: 31px minmax(0, 1fr);
     gap: 11px;
-
     padding: 22px 16px;
-
     border-radius: 15px;
   }
 
   .section-number {
     width: 31px;
     height: 31px;
-
     font-size: 12px;
   }
 
@@ -1669,86 +1130,62 @@ button {
   .policy-section p,
   .policy-list li {
     font-size: 12.5px;
-
     line-height: 1.75;
   }
 
-
-  /* =====================================================
-     INFORMATION CARDS — MOBILE
-  ===================================================== */
-
+  /* Info Cards */
   .info-card {
     gap: 11px;
-
     padding: 13px 12px;
-
     margin: 10px 0;
-
     border-radius: 13px;
   }
 
   .info-icon {
     width: 40px;
     height: 40px;
-
     min-width: 40px;
-
     flex-basis: 40px;
-
     border-radius: 11px;
   }
 
   .info-icon::after {
     inset: 4px;
-
     border-radius: 8px;
   }
 
   .info-icon svg {
     width: 21px;
     height: 21px;
-
     stroke-width: 1.8;
   }
 
   .info-card h3 {
     margin-top: 0;
-
     font-size: 11.8px;
-
     line-height: 1.4;
   }
 
   .info-card p {
     font-size: 11.5px;
-
     line-height: 1.7;
   }
 
   .info-card .placeholder-text {
     padding: 10px;
-
     font-size: 11px;
-
     line-height: 1.65;
   }
 
-
-  /* -------------------------
-     Contact
-  ------------------------- */
-
+  /* Contact */
   .contact-card {
     gap: 11px;
-
     padding: 14px;
   }
 
   .contact-logo {
     width: 50px;
     height: 50px;
-
     flex-basis: 50px;
   }
 
@@ -1765,28 +1202,18 @@ button {
     font-size: 11.5px;
   }
 
-
-  /* -------------------------
-     Footer
-  ------------------------- */
-
+  /* Footer */
   .footer-main {
     display: flex;
-
     flex-direction: column;
-
     align-items: flex-start;
-
     gap: 22px;
   }
 
   .footer-nav {
     width: 100%;
-
     justify-content: flex-start;
-
     flex-wrap: wrap;
-
     gap: 17px;
   }
 
@@ -1796,11 +1223,8 @@ button {
 
   .footer-bottom {
     flex-direction: column;
-
     align-items: flex-start;
-
     gap: 12px;
-
     font-size: 9px;
   }
 
@@ -1810,32 +1234,40 @@ button {
 }
 
 
-/* Privacy shield icon */
+/* =========================================================
+   PRIVACY SHIELD ICON
+========================================================= */
 .privacy-shield-svg {
   width: 27px;
   height: 27px;
   display: block;
 }
+
 .privacy-shield-svg .shield-main {
   fill: #805326;
 }
+
 .privacy-shield-svg .shield-inner,
 .privacy-shield-svg .shield-highlight {
   fill: #fcf7ed;
 }
 
-/* =========================================================
-   PREMIUM RESPONSIVE OVERRIDE
-   Desktop/tablet design above remains the visual base.
-   Mobile rules below are intentionally scoped to <= 620px.
-========================================================= */
 
+/* =========================================================
+   MOBILE MENU / NAV / PRIVACY CARD
+   (Hidden by default, shown on mobile)
+========================================================= */
 .mobile-menu-btn,
 .mobile-nav,
 .mobile-privacy-card {
   display: none;
 }
 
+
+/* =========================================================
+   PREMIUM RESPONSIVE OVERRIDE
+   Mobile menu + nav (<= 900px)
+========================================================= */
 @media (max-width: 900px) {
   .site-header {
     position: sticky;
@@ -1857,6 +1289,7 @@ button {
     display: none;
   }
 
+  /* Hamburger Button */
   .mobile-menu-btn {
     width: 42px;
     height: 42px;
@@ -1892,6 +1325,7 @@ button {
     transform: translateY(-6px) rotate(-45deg);
   }
 
+  /* Mobile Nav Dropdown */
   .mobile-nav {
     position: fixed;
     top: 74px;
@@ -1927,6 +1361,10 @@ button {
   }
 }
 
+
+/* =========================================================
+   MOBILE (<= 620px) — PREMIUM STYLES
+========================================================= */
 @media (max-width: 620px) {
   html {
     scroll-padding-top: 74px;
@@ -1942,7 +1380,6 @@ button {
   }
 
   /* ================= HEADER ================= */
-
   .site-header {
     background: rgba(252, 247, 237, .97);
     border-bottom: 1px solid rgba(166, 124, 82, .10);
@@ -1979,7 +1416,6 @@ button {
   }
 
   /* ================= HERO ================= */
-
   .hero {
     border-bottom: 0;
     background:
@@ -2068,7 +1504,6 @@ button {
   }
 
   /* ================= MAIN ================= */
-
   .main-layout {
     width: calc(100% - 28px);
     display: flex;
@@ -2085,7 +1520,6 @@ button {
   }
 
   /* ================= ON THIS PAGE ================= */
-
   .toc-card {
     padding: 0;
     overflow: hidden;
@@ -2159,7 +1593,6 @@ button {
   }
 
   /* ================= POLICY CARDS ================= */
-
   .policy-content {
     width: 100%;
   }
@@ -2225,9 +1658,7 @@ button {
     transform: rotate(180deg);
   }
 
-  /* The important fix:
-     there is NO special rule forcing Introduction open.
-     Therefore section 1 closes exactly like every other section. */
+  /* Collapsed sections hide everything except heading */
   .policy-section.mobile-collapsed .section-body > :not(h2) {
     display: none !important;
   }
@@ -2260,7 +1691,6 @@ button {
   }
 
   /* ================= SECTION 3 INFO CARDS ================= */
-
   .info-card {
     display: flex;
     gap: 10px;
@@ -2310,7 +1740,6 @@ button {
   }
 
   /* ================= CONTACT ================= */
-
   .contact-card {
     display: flex;
     gap: 11px;
@@ -2338,7 +1767,6 @@ button {
   }
 
   /* ================= MOBILE PRIVACY CARD ================= */
-
   .sidebar-privacy-card {
     display: none;
   }
@@ -2382,100 +1810,80 @@ button {
   }
 
   /* ================= FOOTER ================= */
-  /* Intentionally NOT centered. Premium mobile footer with left-aligned
-     brand/navigation and a compact action button. */
+  .site-footer {
+    padding: 28px 0 18px;
+    text-align: left;
+  }
 
-   /* ================= FOOTER ================= */
+  .footer-main {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 17px 18px;
+    padding-bottom: 20px;
+  }
 
-.site-footer {
-  padding: 28px 0 18px;
-  text-align: left;
+  /* Logo + Mark Day */
+  .footer-brand {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    text-align: left;
+  }
+
+  .footer-logo-wrap,
+  .footer-logo-wrap img {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Download button → RIGHT of logo */
+  .footer-download {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    padding: 10px 15px;
+    font-size: 10.5px;
+  }
+
+  /* Footer navigation → below */
+  .footer-nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px 20px;
+    font-size: 10.5px;
+  }
+
+  /* Bottom */
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    text-align: left;
+    font-size: 9px;
+  }
+
+  .footer-bottom div {
+    display: flex;
+    justify-content: flex-start;
+    gap: 18px;
+  }
 }
 
-.footer-main {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  gap: 17px 18px;
-  padding-bottom: 20px;
-}
 
-/* Logo + Mark Day */
-.footer-brand {
-  width: auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 10px;
-  text-align: left;
-}
-
-/* Logo */
-.footer-logo-wrap,
-.footer-logo-wrap img {
-  width: 44px;
-  height: 44px;
-}
-
-/* Download button → RIGHT of logo */
-.footer-download {
-  grid-column: 2;
-  grid-row: 1;
-
-  justify-self: end;
-
-  padding: 10px 15px;
-  font-size: 10.5px;
-}
-
-/* Footer navigation → below */
-.footer-nav {
-  grid-column: 1 / -1;
-  grid-row: 2;
-
-  width: 100%;
-
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-
-  flex-wrap: wrap;
-  gap: 16px 20px;
-
-  font-size: 10.5px;
-}
-
-/* Bottom */
-.footer-bottom {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-
-  gap: 10px;
-
-  text-align: left;
-  font-size: 9px;
-}
-
-.footer-bottom div {
-  display: flex;
-  justify-content: flex-start;
-  gap: 18px;
-}
-  
-  
- 
-
- 
-
-   
- 
-
-  
-}
-
+/* =========================================================
+   SMALL MOBILE (<= 380px)
+========================================================= */
 @media (max-width: 380px) {
   .container,
   .main-layout {
@@ -2524,6 +1932,9 @@ button {
 }
 
 
+/* =========================================================
+   SMALL MOBILE PRIVACY ICON
+========================================================= */
 @media (max-width: 620px) {
   .mobile-privacy-card .privacy-shield-svg {
     width: 27px;
@@ -2534,11 +1945,8 @@ button {
 
 /* =========================================================
    FINAL MOBILE TYPOGRAPHY / SPACING OVERRIDES
-   Keep Poppins for headings and Inter for body copy.
-   These rules intentionally come last so they override the
-   earlier responsive blocks without changing the desktop design.
+   Poppins = headings, Inter = body copy
 ========================================================= */
-
 @media (max-width: 620px) {
   body {
     font-family: var(--font-body);
@@ -2683,517 +2091,308 @@ button {
   }
 }
 
+
 /* =========================================================
-   FINAL MOBILE TEXT / PARAGRAPH SPACING FIX
-   Desktop typography remains unchanged.
+   SECTION TEXT WRAPPER
 ========================================================= */
-
-@media (max-width: 620px) {
-
-  /* Give the text area a little breathing room below the heading. */
-  .section-body {
-    min-width: 0;
-    margin-top: 8px;
-  }
-
-  /* Match desktop paragraph spacing. */
-  .policy-section p {
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 15px;
-    margin-left: 0;
-
-    font-family: var(--font-body);
-    font-size: 11px;
-    line-height: 1.85;
-  }
-
-  /* Do not leave extra space after the final paragraph. */
-  .policy-section p:last-child {
-    margin-bottom: 0;
-  }
-
-  /* Multiple paragraphs inside Section 3 information cards. */
-  .info-card p {
-    margin: 0;
-    font-family: var(--font-body);
-    font-size: 10.2px;
-    line-height: 1.68;
-  }
-
-  .info-card p + p {
-    margin-top: 10px;
-  }
-
-  /* Placeholder paragraphs keep the same comfortable spacing. */
-  .info-card .placeholder-text {
-    margin-top: 10px;
-    font-size: 10.2px;
-    line-height: 1.68;
-  }
-
-  /* Contact card paragraphs. */
-  .contact-content p {
-    margin: 5px 0;
-    font-family: var(--font-body);
-    font-size: 10.5px;
-    line-height: 1.65;
-  }
-}
-
-@media (max-width: 380px) {
-
-  .section-body {
-    margin-top: 7px;
-  }
-
-  .policy-section p {
-    margin-bottom: 15px;
-    font-size: 10.6px;
-    line-height: 1.85;
-  }
-
-  .policy-section p:last-child {
-    margin-bottom: 0;
-  }
-
-  .info-card p {
-    font-size: 9.9px;
-    line-height: 1.68;
-  }
-
-  .info-card p + p {
-    margin-top: 10px;
-  }
+.section-text {
+  width: 100%;
 }
 
 
 /* =========================================================
-   MARK DAY - FINAL MOBILE SPACING FIX
-   Desktop styles remain unchanged.
-   Text/content is NOT changed.
+   ★★★ MOBILE SPACING FIX — PART 1 ★★★
+   Left-side indentation fix + full-width content
 ========================================================= */
-
-@media (max-width: 620px) {
-  .policy-section {
-    grid-template-columns: 32px minmax(0, 1fr);
-    gap: 8px;
-    padding: 16px 10px;
-    margin-bottom: 9px;
-  }
-
-  .section-number {
-    width: 32px;
-    height: 32px;
-    min-width: 32px;
-  }
-
-  .section-body {
-    width: 100%;
-    min-width: 0;
-    margin-top: 0;
-  }
-
-  .policy-section h2 {
-    margin: 1px 16px 10px 0;
-    padding: 0;
-  }
-
-  /* Equal paragraph spacing across all policy sections. */
-  .policy-section p {
-    margin: 0 0 12px;
-  }
-
-  .policy-section p:last-child {
-    margin-bottom: 0;
-  }
-
-  /* Paragraphs separated by .section-text get the same spacing. */
-  .section-text {
-    margin: 0;
-  }
-
-  .section-text + .section-text {
-    margin-top: 12px;
-  }
-
-  .section-text + .section-text p {
-    margin-top: 0;
-  }
-
-  .policy-list {
-    margin-top: 6px;
-    padding-left: 18px;
-  }
-
-  .policy-list li {
-    margin: 7px 0;
-  }
-
-  /* Section 3 cards: consistent inner spacing. */
-  .info-card {
-    width: 100%;
-    min-width: 0;
-    gap: 9px;
-    margin: 9px 0;
-    padding: 11px;
-  }
-
-  .info-content {
-    min-width: 0;
-    flex: 1;
-  }
-
-  .info-card h3 {
-    margin: 0 0 5px;
-  }
-
-  .info-card p {
-    margin: 0;
-  }
-
-  .info-card p + p {
-    margin-top: 10px;
-  }
-
-  .contact-card {
-    width: 100%;
-    min-width: 0;
-    gap: 10px;
-    padding: 12px;
-  }
-
-  .contact-content {
-    min-width: 0;
-    flex: 1;
-  }
-
-  .contact-content p {
-    margin: 5px 0;
-  }
-}
-
-@media (max-width: 380px) {
-  .policy-section {
-    grid-template-columns: 32px minmax(0, 1fr);
-    gap: 8px;
-    padding: 15px 9px;
-  }
-
-  .policy-section h2 {
-    margin-right: 10px;
-  }
-
-  .policy-section p {
-    margin-bottom: 12px;
-  }
-
-  .section-text + .section-text {
-    margin-top: 12px;
-  }
-
-  .info-card {
-    gap: 8px;
-    padding: 10px;
-  }
-}
-
-
-/* =========================================================
-   MARK DAY - MOBILE STRUCTURAL SPACING FIX V2
-
-   IMPORTANT:
-   - Desktop layout is untouched.
-   - No HTML/text/content changes are required.
-   - This block intentionally comes LAST so all previous
-     mobile spacing overrides are normalized here.
-
-   Main fix:
-   Paragraph spacing is controlled by the paragraph group
-   (.section-text) instead of relying on paragraph margin
-   collapsing. This keeps the distance identical on mobile.
-========================================================= */
-
 @media (max-width: 620px) {
 
-  /* ---------------------------------------------------------
-     POLICY CARD
-     Keep the number close to the content and maximize the
-     available text width on small screens.
-  --------------------------------------------------------- */
+  .container,
+  .main-layout {
+    width: calc(100% - 24px);
+  }
 
   .policy-section {
     display: grid;
-    grid-template-columns: 32px minmax(0, 1fr);
-    column-gap: 9px;
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 0 10px;
+    padding: 16px 14px;
+    margin-bottom: 10px;
     align-items: start;
+  }
 
+  .section-number {
+    grid-column: 1;
+    grid-row: 1;
+    width: 34px;
+    height: 34px;
+    font-size: 12px;
+    align-self: start;
+  }
+
+  /* section-body children become grid items
+     so heading sits next to number,
+     and content spans full width */
+  .section-body {
+    display: contents;
+  }
+
+  .policy-section h2 {
+    grid-column: 2;
+    grid-row: 1;
+    min-height: 34px;
+    display: flex;
+    align-items: center;
+    margin: 0 24px 12px 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.38;
+    letter-spacing: -.018em;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  /* Content below heading spans full width */
+  .section-body > :not(h2) {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  /* Collapse behavior */
+  .policy-section.mobile-collapsed .section-body > :not(h2) {
+    display: none !important;
+  }
+
+  /* Restore flex for info/contact cards */
+  .policy-section.mobile-open .section-body > .info-card,
+  .policy-section.mobile-open .section-body > .contact-card {
+    display: flex;
+  }
+
+  .section-text {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  .info-card,
+  .policy-list,
+  .notice-box,
+  .contact-card {
     width: 100%;
-    min-width: 0;
+  }
+}
 
-    padding: 16px 10px;
-    margin: 0 0 10px;
+@media (max-width: 380px) {
+  .container,
+  .main-layout {
+    width: calc(100% - 20px);
+  }
 
-    box-sizing: border-box;
+  .policy-section {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 0 9px;
+    padding: 15px 12px;
   }
 
   .section-number {
     width: 32px;
     height: 32px;
-    min-width: 32px;
-    margin: 0;
+    font-size: 11px;
   }
-
-  .section-body {
-    width: 95%;
-    min-width: 0;
-    margin: 0;
-    padding: 0;
-  }
-
-  /* ---------------------------------------------------------
-     HEADING
-     One consistent gap between heading and first paragraph.
-  --------------------------------------------------------- */
 
   .policy-section h2 {
-    
-    padding: 0;
-
-    font-size: 14px;
-    line-height: 1.38;
-    letter-spacing: -0.018em;
-
-    box-sizing: border-box;
-  }
-
-  /* ---------------------------------------------------------
-     PARAGRAPH GROUPS
-
-     Do NOT use paragraph bottom margins here. A flex column
-     gives us a real, fixed gap between every paragraph and
-     prevents browser margin-collapsing differences on mobile.
-  --------------------------------------------------------- */
-
-  .section-text {
-    width: 100%;
-    min-width: 0;
-
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-
-    margin: 0;
-    padding: 0;
-  }
-
-  .section-text p,
-  .section-text p:last-child {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-
-    font-size: 11px;
-    line-height: 1.78;
-
-    box-sizing: border-box;
-  }
-
-  /* Some sections use multiple .section-text wrappers instead
-     of multiple <p> tags in one wrapper. Give those wrappers the
-     exact same 15px vertical separation. */
-
-  .section-body > .section-text + .section-text {
-    margin-top: 15px;
-  }
-
-  /* Never let a paragraph wrapper add an accidental bottom gap. */
-
-  .section-body > .section-text:last-child {
-    margin-bottom: 0;
-  }
-
-  /* ---------------------------------------------------------
-     LISTS
-  --------------------------------------------------------- */
-
-  .policy-list {
-    width: 100%;
-    margin: 0;
-    padding-left: 18px;
-    box-sizing: border-box;
-  }
-
-  .policy-list li {
-    margin: 0 0 9px;
-    padding-left: 2px;
-
-    font-size: 11px;
-    line-height: 1.72;
-  }
-
-  .policy-list li:last-child {
-    margin-bottom: 0;
-  }
-
-  /* ---------------------------------------------------------
-     INFORMATION CARDS — SECTION 3
-
-     Keep icon and text aligned, while making the text column
-     use all remaining width. Paragraphs inside one card use
-     the same fixed gap as normal policy paragraphs.
-  --------------------------------------------------------- */
-
-  .info-card {
-    display: flex;
-    align-items: flex-start;
-
-    width: 100%;
-    min-width: 0;
-    box-sizing: border-box;
-
-    gap: 9px;
-    margin: 10px 0;
-    padding: 11px;
-  }
-
-  .info-icon {
-    flex: 0 0 37px;
-    width: 37px;
-    height: 37px;
-  }
-
-  .info-content {
-    min-width: 0;
-    flex: 1 1 auto;
-    width: 0;
-
-    display: flex;
-    flex-direction: column;
-  }
-
-  .info-card h3 {
-    width: 100%;
-    margin: 0 0 6px;
-    padding: 0;
-
-    font-size: 11px;
-    line-height: 1.4;
-  }
-
-  .info-card p,
-  .info-card p:last-child {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-
-    font-size: 10.2px;
-    line-height: 1.68;
-  }
-
-  .info-card p + p {
-    margin-top: 12px;
-  }
-
-  .info-card .placeholder-text {
-    margin-top: 12px;
-    padding: 9px 10px;
-  }
-
-  /* ---------------------------------------------------------
-     CONTACT CARD
-  --------------------------------------------------------- */
-
-  .contact-card {
-    display: flex;
-    align-items: flex-start;
-
-    width: 100%;
-    min-width: 0;
-    box-sizing: border-box;
-
-    gap: 10px;
-    padding: 12px;
-  }
-
-  .contact-logo {
-    flex: 0 0 48px;
-    width: 48px;
-    height: 48px;
-  }
-
-  .contact-logo img {
-    width: 48px;
-    height: 48px;
-  }
-
-  .contact-content {
-    min-width: 0;
-    flex: 1 1 auto;
-    width: 0;
-  }
-
-  .contact-content h3 {
-    margin: 0 0 6px;
-  }
-
-  .contact-content p {
-    margin: 0 0 9px;
-    font-size: 10.5px;
-    line-height: 1.65;
-  }
-
-  .contact-content p:last-child {
-    margin-bottom: 0;
+    min-height: 32px;
+    font-size: 13.5px;
+    margin-right: 22px;
+    margin-bottom: 10px;
   }
 }
 
 
 /* =========================================================
-   EXTRA SMALL PHONES
-   Same structure, slightly tighter outer padding only.
+   ★★★ MOBILE SPACING FIX — PART 2 ★★★
+   1) Collapsed card ki extra bottom padding hatao
+   2) Text / paragraph ke beech proper top-bottom margin
+   3) Info-card, section-text, list sab me consistent spacing
 ========================================================= */
+@media (max-width: 620px) {
 
-@media (max-width: 380px) {
+  /* ---------- 1. COLLAPSED CARD COMPACT ---------- */
 
-  .policy-section {
-    grid-template-columns: 31px minmax(0, 1fr);
-    column-gap: 8px;
-    padding: 15px 9px;
+  /* Jab card closed ho, toh sirf heading row ke around
+     padding rahe — extra bottom padding na dikhe */
+  .policy-section.mobile-collapsed {
+    padding: 16px 14px !important;
+    min-height: 0 !important;
+    align-items: center !important;
   }
 
-  .section-number {
-    width: 31px;
-    height: 31px;
-    min-width: 31px;
+  /* Collapsed card me heading ka bottom margin hatao
+     taaki card ke andar extra space na rahe */
+  .policy-section.mobile-collapsed h2 {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
   }
 
-  .policy-section h2 {
-    margin-bottom: 12px;
-    font-size: 13.5px;
+  /* Number circle bhi vertically center ho collapsed me */
+  .policy-section.mobile-collapsed .section-number {
+    align-self: center !important;
   }
 
-  .section-text {
-    gap: 14px;
+  /* ---------- 2. OPEN CARD SPACING ---------- */
+
+  /* Open card me heading ke neeche proper gap */
+  .policy-section.mobile-open h2,
+  .policy-section:not(.mobile-collapsed) h2 {
+    margin-bottom: 14px !important;
   }
 
-  .section-text p,
-  .section-text p:last-child {
-    font-size: 10.6px;
-    line-height: 1.78;
+  /* section-text blocks ke beech gap */
+  .policy-section .section-text {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
-  .section-body > .section-text + .section-text {
+  .policy-section .section-text + .section-text {
     margin-top: 14px;
   }
 
-  .info-card {
-    gap: 8px;
-    padding: 10px;
+  /* Paragraph ke andar ka spacing */
+  .policy-section .section-text p {
+    margin: 0 0 12px 0;
   }
 
-  .info-card p,
-  .info-card p:last-child {
-    font-size: 9.9px;
+  .policy-section .section-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ---------- 3. INFO CARD SPACING ---------- */
+
+  .policy-section .info-card {
+    margin: 12px 0;
+    padding: 14px 13px;
+  }
+
+  .policy-section .info-card:first-of-type {
+    margin-top: 4px;
+  }
+
+  .policy-section .info-card:last-of-type {
+    margin-bottom: 0;
+  }
+
+  /* Info card ke andar text spacing */
+  .policy-section .info-card h3 {
+    margin: 0 0 6px 0;
+  }
+
+  .policy-section .info-card p {
+    margin: 0;
+  }
+
+  .policy-section .info-card p + p,
+  .policy-section .info-card p + .placeholder-text,
+  .policy-section .info-card .placeholder-text {
+    margin-top: 9px;
+  }
+
+  /* ---------- 4. POLICY LIST SPACING ---------- */
+
+  .policy-section .policy-list {
+    margin: 8px 0 16px 0;
+    padding-left: 20px;
+  }
+
+  .policy-section .policy-list + .notice-box {
+    margin-top: 14px;
+  }
+
+  .policy-section .policy-list li {
+    margin: 8px 0;
+    padding-left: 4px;
+  }
+
+  .policy-section .policy-list li:first-child {
+    margin-top: 0;
+  }
+
+  .policy-section .policy-list li:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ---------- 5. NOTICE BOX ---------- */
+
+  .policy-section .notice-box {
+    margin-top: 14px;
+    padding: 12px 14px;
+  }
+
+  /* ---------- 6. CONTACT CARD SPACING ---------- */
+
+  .policy-section .contact-card {
+    margin-top: 8px;
+    padding: 14px 13px;
+    gap: 12px;
+  }
+
+  .policy-section .contact-card .contact-content p {
+    margin: 6px 0;
+  }
+
+  .policy-section .contact-card .contact-content p:first-of-type {
+    margin-top: 0;
+  }
+
+  .policy-section .contact-card .contact-content p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  /* ---------- 7. LAST ELEMENT IN OPEN CARD ---------- */
+
+  /* Open card me last element ke baad extra space na ho */
+  .policy-section.mobile-open .section-body > :last-child,
+  .policy-section:not(.mobile-collapsed) .section-body > :last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* Open card ka bottom padding proper rahe */
+  .policy-section.mobile-open,
+  .policy-section:not(.mobile-collapsed) {
+    padding-bottom: 18px !important;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE (<= 380px) — SPACING TUNING
+========================================================= */
+@media (max-width: 380px) {
+
+  .policy-section.mobile-collapsed {
+    padding: 15px 12px !important;
+  }
+
+  .policy-section.mobile-open,
+  .policy-section:not(.mobile-collapsed) {
+    padding-bottom: 16px !important;
+  }
+
+  .policy-section .section-text + .section-text {
+    margin-top: 12px;
+  }
+
+  .policy-section .info-card {
+    margin: 10px 0;
+    padding: 12px 11px;
+  }
+
+  .policy-section .policy-list {
+    margin: 7px 0 14px 0;
+  }
+
+  .policy-section .contact-card {
+    padding: 12px 11px;
+    gap: 10px;
   }
 }
