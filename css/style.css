@@ -1808,3 +1808,1392 @@ button {
     gap: 18px;
   }
 }
+
+
+/* Privacy shield icon */
+.privacy-shield-svg {
+  width: 27px;
+  height: 27px;
+  display: block;
+}
+.privacy-shield-svg .shield-main {
+  fill: #805326;
+}
+.privacy-shield-svg .shield-inner,
+.privacy-shield-svg .shield-highlight {
+  fill: #fcf7ed;
+}
+
+/* =========================================================
+   PREMIUM RESPONSIVE OVERRIDE
+   Desktop/tablet design above remains the visual base.
+   Mobile rules below are intentionally scoped to <= 620px.
+========================================================= */
+
+.mobile-menu-btn,
+.mobile-nav,
+.mobile-privacy-card {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .header-inner {
+    min-height: 68px;
+    gap: 12px;
+  }
+
+  .brand {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .download-btn {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: 0;
+    border-radius: 12px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    cursor: pointer;
+  }
+
+  .mobile-menu-btn span {
+    width: 19px;
+    height: 2px;
+    border-radius: 10px;
+    background: #2b1b12;
+    transition: transform .2s ease, opacity .2s ease;
+  }
+
+  .mobile-menu-btn[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .mobile-menu-btn[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-btn[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  .mobile-nav {
+    position: fixed;
+    top: 74px;
+    left: 14px;
+    right: 14px;
+    z-index: 110;
+    width: auto;
+    margin: 0;
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: rgba(255, 253, 250, .98);
+    box-shadow: 0 18px 42px rgba(72, 45, 23, .14);
+  }
+
+  .mobile-nav.open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile-nav a {
+    padding: 12px 13px;
+    border-radius: 10px;
+    color: #3f3934;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .mobile-nav a:hover,
+  .mobile-nav a:active {
+    background: #f7eee1;
+    color: var(--brown-dark);
+  }
+}
+
+@media (max-width: 620px) {
+  html {
+    scroll-padding-top: 74px;
+  }
+
+  body {
+    background: #fcf7ed;
+    font-size: 14px;
+  }
+
+  .container {
+    width: calc(100% - 28px);
+  }
+
+  /* ================= HEADER ================= */
+
+  .site-header {
+    background: rgba(252, 247, 237, .97);
+    border-bottom: 1px solid rgba(166, 124, 82, .10);
+  }
+
+  .header-inner {
+    min-height: 66px;
+  }
+
+  .brand {
+    gap: 10px;
+  }
+
+  .brand-logo-wrap,
+  .brand-logo {
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px;
+    border-radius: 9px;
+  }
+
+  .brand-name {
+    font-size: 18px;
+    letter-spacing: -.035em;
+  }
+
+  .brand-subtitle {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* ================= HERO ================= */
+
+  .hero {
+    border-bottom: 0;
+    background:
+      radial-gradient(circle at 68% 70%, rgba(222, 197, 163, .25), transparent 35%),
+      linear-gradient(180deg, #fcf7ed 0%, #fbf4e9 100%);
+  }
+
+  .hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    min-height: 0;
+    padding: 29px 0 22px;
+  }
+
+  .hero-content {
+    max-width: none;
+  }
+
+  .eyebrow {
+    padding: 5px 10px;
+    font-size: 9px;
+    letter-spacing: .10em;
+  }
+
+  .hero h1 {
+    margin: 12px 0 9px;
+    font-size: clamp(31px, 9vw, 37px);
+    line-height: 1.05;
+    letter-spacing: -.055em;
+  }
+
+  .hero-description {
+    max-width: 360px;
+    font-size: 12.5px;
+    line-height: 1.62;
+  }
+
+  .updated-date {
+    margin-top: 17px;
+    gap: 8px;
+    font-size: 10.5px;
+  }
+
+  .date-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 7px;
+  }
+
+  .date-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .hero-visual {
+    min-height: 145px;
+    margin-top: 5px;
+    gap: 11px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-logo-orb {
+    width: 140px;
+    height: 140px;
+    border-radius: 32px;
+    background: rgba(255, 255, 255, .34);
+    box-shadow: none;
+  }
+
+  .hero-logo-orb img {
+    width: 128px;
+    height: 128px;
+  }
+
+  .hero-script {
+    font-size: 20px;
+    line-height: 1.02;
+  }
+
+  .hero-script span {
+    width: 63px;
+    margin-top: 8px;
+  }
+
+  /* ================= MAIN ================= */
+
+  .main-layout {
+    width: calc(100% - 28px);
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    padding-top: 0;
+    padding-bottom: 32px;
+  }
+
+  .sidebar {
+    width: 100%;
+    order: -1;
+    position: static;
+  }
+
+  /* ================= ON THIS PAGE ================= */
+
+  .toc-card {
+    padding: 0;
+    overflow: hidden;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, .90);
+    box-shadow: 0 5px 18px rgba(75, 48, 26, .055);
+  }
+
+  .toc-heading {
+    display: none;
+  }
+
+  .toc-toggle {
+    width: 100%;
+    min-height: 52px;
+    padding: 12px 13px;
+    display: flex;
+    align-items: center;
+    border: 0;
+    background: transparent;
+    color: #211a15;
+    cursor: pointer;
+    text-align: left;
+    font-family: var(--font-display);
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .toc-toggle::before {
+    content: "☷";
+    margin-right: 8px;
+    color: #7c4b25;
+    font-size: 15px;
+  }
+
+  .toc-toggle span {
+    margin-right: auto;
+  }
+
+  .toc-toggle svg {
+    width: 17px;
+    height: 17px;
+    padding: 3px;
+    border-radius: 6px;
+    background: #f5f0e9;
+    fill: none;
+    stroke: #4c3928;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform .2s ease;
+  }
+
+  .toc-toggle[aria-expanded="true"] svg {
+    transform: rotate(180deg);
+  }
+
+  .toc-card nav {
+    display: none;
+    padding: 0 9px 10px;
+  }
+
+  .toc-card nav.open {
+    display: flex;
+  }
+
+  .toc-card nav a {
+    padding: 9px 10px;
+    font-size: 10.5px;
+    line-height: 1.4;
+  }
+
+  /* ================= POLICY CARDS ================= */
+
+  .policy-content {
+    width: 100%;
+  }
+
+  .policy-section {
+    display: grid;
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 10px;
+    margin-bottom: 9px;
+    padding: 17px 14px;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(80, 50, 25, .035);
+  }
+
+  .section-number {
+    width: 34px;
+    height: 34px;
+    font-size: 12px;
+    align-self: start;
+  }
+
+  .section-body {
+    min-width: 0;
+  }
+
+  .policy-section h2 {
+    position: relative;
+    margin: 2px 25px 0 0;
+    padding: 0 0 1px;
+    color: #17120e;
+    font-family: var(--font-display);
+    font-size: 15px;
+    line-height: 1.28;
+    letter-spacing: -.025em;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .policy-section h2:focus-visible {
+    outline: 2px solid rgba(166, 124, 82, .55);
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+
+  .policy-section h2::after {
+    content: "⌄";
+    position: absolute;
+    right: -20px;
+    top: -1px;
+    color: #2b211a;
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1;
+    transition: transform .2s ease;
+  }
+
+  .policy-section.mobile-collapsed h2::after {
+    transform: rotate(0deg);
+  }
+
+  .policy-section.mobile-open h2::after,
+  .policy-section:not(.mobile-collapsed) h2::after {
+    transform: rotate(180deg);
+  }
+
+  /* The important fix:
+     there is NO special rule forcing Introduction open.
+     Therefore section 1 closes exactly like every other section. */
+  .policy-section.mobile-collapsed .section-body > :not(h2) {
+    display: none !important;
+  }
+
+  .policy-section.mobile-open .section-body > :not(h2) {
+    display: revert;
+  }
+
+  .policy-section.mobile-collapsed {
+    min-height: 66px;
+    align-items: start;
+  }
+
+  .policy-section p,
+  .policy-list li {
+    font-size: 11.5px;
+    line-height: 1.68;
+  }
+
+  .policy-section p {
+    margin-bottom: 13px;
+  }
+
+  .policy-list {
+    padding-left: 19px;
+  }
+
+  .policy-list li {
+    margin: 7px 0;
+  }
+
+  /* ================= SECTION 3 INFO CARDS ================= */
+
+  .info-card {
+    display: flex;
+    gap: 10px;
+    margin: 9px 0;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: none;
+  }
+
+  .info-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .info-icon {
+    width: 37px;
+    height: 37px;
+    min-width: 37px;
+    flex-basis: 37px;
+    border-radius: 10px;
+  }
+
+  .info-icon::after {
+    inset: 4px;
+    border-radius: 7px;
+  }
+
+  .info-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .info-card h3 {
+    margin: 0 0 4px;
+    font-size: 11.5px;
+    line-height: 1.35;
+  }
+
+  .info-card p {
+    font-size: 10.8px;
+    line-height: 1.62;
+  }
+
+  .info-card .placeholder-text {
+    padding: 9px;
+    font-size: 10.5px;
+  }
+
+  /* ================= CONTACT ================= */
+
+  .contact-card {
+    display: flex;
+    gap: 11px;
+    padding: 13px;
+    border-radius: 13px;
+  }
+
+  .contact-logo {
+    width: 48px;
+    height: 48px;
+    flex-basis: 48px;
+  }
+
+  .contact-logo img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .contact-content h3 {
+    font-size: 12.5px;
+  }
+
+  .contact-content p {
+    font-size: 10.8px;
+  }
+
+  /* ================= MOBILE PRIVACY CARD ================= */
+
+  .sidebar-privacy-card {
+    display: none;
+  }
+
+  .mobile-privacy-card {
+    display: flex;
+    width: 100%;
+    margin: 1px 0 4px;
+    padding: 14px;
+    gap: 12px;
+    align-items: flex-start;
+    border: 1px solid #ead8bd;
+    border-radius: 14px;
+    background: #f8ebd8;
+  }
+
+  .mobile-privacy-card .privacy-card-icon {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+  }
+
+  .mobile-privacy-card .privacy-card-icon img {
+    width: 42px;
+    height: 42px;
+    object-fit: cover;
+  }
+
+  .mobile-privacy-card h3 {
+    margin: 0 0 4px;
+    font-family: var(--font-display);
+    font-size: 11.5px;
+    line-height: 1.3;
+  }
+
+  .mobile-privacy-card p {
+    margin: 0;
+    color: #746b61;
+    font-size: 10px;
+    line-height: 1.55;
+  }
+
+  /* ================= FOOTER ================= */
+  /* Intentionally NOT centered. Premium mobile footer with left-aligned
+     brand/navigation and a compact action button. */
+
+   /* ================= FOOTER ================= */
+
+.site-footer {
+  padding: 28px 0 18px;
+  text-align: left;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 17px 18px;
+  padding-bottom: 20px;
+}
+
+/* Logo + Mark Day */
+.footer-brand {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  text-align: left;
+}
+
+/* Logo */
+.footer-logo-wrap,
+.footer-logo-wrap img {
+  width: 44px;
+  height: 44px;
+}
+
+/* Download button → RIGHT of logo */
+.footer-download {
+  grid-column: 2;
+  grid-row: 1;
+
+  justify-self: end;
+
+  padding: 10px 15px;
+  font-size: 10.5px;
+}
+
+/* Footer navigation → below */
+.footer-nav {
+  grid-column: 1 / -1;
+  grid-row: 2;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  flex-wrap: wrap;
+  gap: 16px 20px;
+
+  font-size: 10.5px;
+}
+
+/* Bottom */
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  gap: 10px;
+
+  text-align: left;
+  font-size: 9px;
+}
+
+.footer-bottom div {
+  display: flex;
+  justify-content: flex-start;
+  gap: 18px;
+}
+  
+  
+ 
+
+ 
+
+   
+ 
+
+  
+}
+
+@media (max-width: 380px) {
+  .container,
+  .main-layout {
+    width: calc(100% - 22px);
+  }
+
+  .hero-inner {
+    padding-top: 25px;
+  }
+
+  .hero h1 {
+    font-size: 31px;
+  }
+
+  .hero-description {
+    font-size: 12px;
+  }
+
+  .hero-logo-orb {
+    width: 128px;
+    height: 128px;
+  }
+
+  .hero-logo-orb img {
+    width: 117px;
+    height: 117px;
+  }
+
+  .hero-script {
+    font-size: 18px;
+  }
+
+  .policy-section {
+    grid-template-columns: 32px minmax(0, 1fr);
+    padding: 15px 12px;
+  }
+
+  .section-number {
+    width: 32px;
+    height: 32px;
+  }
+
+  .mobile-privacy-card {
+    padding: 13px;
+  }
+}
+
+
+@media (max-width: 620px) {
+  .mobile-privacy-card .privacy-shield-svg {
+    width: 27px;
+    height: 27px;
+  }
+}
+
+
+/* =========================================================
+   FINAL MOBILE TYPOGRAPHY / SPACING OVERRIDES
+   Keep Poppins for headings and Inter for body copy.
+   These rules intentionally come last so they override the
+   earlier responsive blocks without changing the desktop design.
+========================================================= */
+
+@media (max-width: 620px) {
+  body {
+    font-family: var(--font-body);
+    font-size: 13px;
+  }
+
+  .policy-section {
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 12px;
+    padding: 17px 14px 18px;
+    margin-bottom: 10px;
+  }
+
+  .policy-section h2 {
+    margin: 1px 24px 10px 0;
+    padding: 0;
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.38;
+    letter-spacing: -.018em;
+  }
+
+  .policy-section p,
+  .policy-list li {
+    font-family: var(--font-body);
+    font-size: 11px;
+    line-height: 1.78;
+  }
+
+  .policy-section p {
+    margin: 0 0 14px;
+  }
+
+  .policy-list {
+    padding-left: 19px;
+    margin-top: 7px;
+  }
+
+  .policy-list li {
+    margin: 8px 0;
+  }
+
+  .info-card {
+    gap: 10px;
+    padding: 12px;
+    margin: 10px 0;
+  }
+
+  .info-card h3 {
+    margin: 0 0 5px;
+    font-family: var(--font-display);
+    font-size: 10.8px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -.01em;
+  }
+
+  .info-card p {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 10.2px;
+    line-height: 1.68;
+  }
+
+  .info-card .placeholder-text {
+    font-size: 10.2px;
+    line-height: 1.68;
+  }
+
+  .mobile-privacy-card h3 {
+    font-family: var(--font-display);
+    font-size: 10.8px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .mobile-privacy-card p {
+    font-family: var(--font-body);
+    font-size: 10px;
+    line-height: 1.65;
+  }
+
+  .contact-content h3 {
+    font-family: var(--font-display);
+    font-size: 12px;
+  }
+
+  .contact-content p {
+    font-family: var(--font-body);
+    font-size: 10.5px;
+    line-height: 1.65;
+  }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: 29px;
+    line-height: 1.08;
+  }
+
+  .hero-description {
+    font-family: var(--font-body);
+    font-size: 12px;
+    line-height: 1.68;
+  }
+}
+
+@media (max-width: 380px) {
+  .policy-section {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 11px;
+    padding: 16px 12px 17px;
+  }
+
+  .section-number {
+    width: 32px;
+    height: 32px;
+  }
+
+  .policy-section h2 {
+    font-size: 13.5px;
+    line-height: 1.4;
+  }
+
+  .policy-section p,
+  .policy-list li {
+    font-size: 10.6px;
+    line-height: 1.78;
+  }
+
+  .info-card h3 {
+    font-size: 10.4px;
+  }
+
+  .info-card p,
+  .info-card .placeholder-text {
+    font-size: 9.9px;
+  }
+
+  .hero h1 {
+    font-size: 27px;
+  }
+}
+
+/* =========================================================
+   FINAL MOBILE TEXT / PARAGRAPH SPACING FIX
+   Desktop typography remains unchanged.
+========================================================= */
+
+@media (max-width: 620px) {
+
+  /* Give the text area a little breathing room below the heading. */
+  .section-body {
+    min-width: 0;
+    margin-top: 8px;
+  }
+
+  /* Match desktop paragraph spacing. */
+  .policy-section p {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 15px;
+    margin-left: 0;
+
+    font-family: var(--font-body);
+    font-size: 11px;
+    line-height: 1.85;
+  }
+
+  /* Do not leave extra space after the final paragraph. */
+  .policy-section p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Multiple paragraphs inside Section 3 information cards. */
+  .info-card p {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 10.2px;
+    line-height: 1.68;
+  }
+
+  .info-card p + p {
+    margin-top: 10px;
+  }
+
+  /* Placeholder paragraphs keep the same comfortable spacing. */
+  .info-card .placeholder-text {
+    margin-top: 10px;
+    font-size: 10.2px;
+    line-height: 1.68;
+  }
+
+  /* Contact card paragraphs. */
+  .contact-content p {
+    margin: 5px 0;
+    font-family: var(--font-body);
+    font-size: 10.5px;
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 380px) {
+
+  .section-body {
+    margin-top: 7px;
+  }
+
+  .policy-section p {
+    margin-bottom: 15px;
+    font-size: 10.6px;
+    line-height: 1.85;
+  }
+
+  .policy-section p:last-child {
+    margin-bottom: 0;
+  }
+
+  .info-card p {
+    font-size: 9.9px;
+    line-height: 1.68;
+  }
+
+  .info-card p + p {
+    margin-top: 10px;
+  }
+}
+
+
+/* =========================================================
+   MARK DAY - FINAL MOBILE SPACING FIX
+   Desktop styles remain unchanged.
+   Text/content is NOT changed.
+========================================================= */
+
+@media (max-width: 620px) {
+  .policy-section {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 8px;
+    padding: 16px 10px;
+    margin-bottom: 9px;
+  }
+
+  .section-number {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+  }
+
+  .section-body {
+    width: 100%;
+    min-width: 0;
+    margin-top: 0;
+  }
+
+  .policy-section h2 {
+    margin: 1px 16px 10px 0;
+    padding: 0;
+  }
+
+  /* Equal paragraph spacing across all policy sections. */
+  .policy-section p {
+    margin: 0 0 12px;
+  }
+
+  .policy-section p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Paragraphs separated by .section-text get the same spacing. */
+  .section-text {
+    margin: 0;
+  }
+
+  .section-text + .section-text {
+    margin-top: 12px;
+  }
+
+  .section-text + .section-text p {
+    margin-top: 0;
+  }
+
+  .policy-list {
+    margin-top: 6px;
+    padding-left: 18px;
+  }
+
+  .policy-list li {
+    margin: 7px 0;
+  }
+
+  /* Section 3 cards: consistent inner spacing. */
+  .info-card {
+    width: 100%;
+    min-width: 0;
+    gap: 9px;
+    margin: 9px 0;
+    padding: 11px;
+  }
+
+  .info-content {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .info-card h3 {
+    margin: 0 0 5px;
+  }
+
+  .info-card p {
+    margin: 0;
+  }
+
+  .info-card p + p {
+    margin-top: 10px;
+  }
+
+  .contact-card {
+    width: 100%;
+    min-width: 0;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .contact-content {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .contact-content p {
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .policy-section {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 8px;
+    padding: 15px 9px;
+  }
+
+  .policy-section h2 {
+    margin-right: 10px;
+  }
+
+  .policy-section p {
+    margin-bottom: 12px;
+  }
+
+  .section-text + .section-text {
+    margin-top: 12px;
+  }
+
+  .info-card {
+    gap: 8px;
+    padding: 10px;
+  }
+}
+
+
+/* =========================================================
+   MARK DAY - MOBILE STRUCTURAL SPACING FIX V2
+
+   IMPORTANT:
+   - Desktop layout is untouched.
+   - No HTML/text/content changes are required.
+   - This block intentionally comes LAST so all previous
+     mobile spacing overrides are normalized here.
+
+   Main fix:
+   Paragraph spacing is controlled by the paragraph group
+   (.section-text) instead of relying on paragraph margin
+   collapsing. This keeps the distance identical on mobile.
+========================================================= */
+
+@media (max-width: 620px) {
+
+  /* ---------------------------------------------------------
+     POLICY CARD
+     Keep the number close to the content and maximize the
+     available text width on small screens.
+  --------------------------------------------------------- */
+
+  .policy-section {
+    display: grid;
+    grid-template-columns: 32px minmax(0, 1fr);
+    column-gap: 9px;
+    align-items: start;
+
+    width: 100%;
+    min-width: 0;
+
+    padding: 16px 10px;
+    margin: 0 0 10px;
+
+    box-sizing: border-box;
+  }
+
+  .section-number {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    margin: 0;
+  }
+
+  .section-body {
+    width: 95%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* ---------------------------------------------------------
+     HEADING
+     One consistent gap between heading and first paragraph.
+  --------------------------------------------------------- */
+
+  .policy-section h2 {
+    
+    padding: 0;
+
+    font-size: 14px;
+    line-height: 1.38;
+    letter-spacing: -0.018em;
+
+    box-sizing: border-box;
+  }
+
+  /* ---------------------------------------------------------
+     PARAGRAPH GROUPS
+
+     Do NOT use paragraph bottom margins here. A flex column
+     gives us a real, fixed gap between every paragraph and
+     prevents browser margin-collapsing differences on mobile.
+  --------------------------------------------------------- */
+
+  .section-text {
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  .section-text p,
+  .section-text p:last-child {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    font-size: 11px;
+    line-height: 1.78;
+
+    box-sizing: border-box;
+  }
+
+  /* Some sections use multiple .section-text wrappers instead
+     of multiple <p> tags in one wrapper. Give those wrappers the
+     exact same 15px vertical separation. */
+
+  .section-body > .section-text + .section-text {
+    margin-top: 15px;
+  }
+
+  /* Never let a paragraph wrapper add an accidental bottom gap. */
+
+  .section-body > .section-text:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ---------------------------------------------------------
+     LISTS
+  --------------------------------------------------------- */
+
+  .policy-list {
+    width: 100%;
+    margin: 0;
+    padding-left: 18px;
+    box-sizing: border-box;
+  }
+
+  .policy-list li {
+    margin: 0 0 9px;
+    padding-left: 2px;
+
+    font-size: 11px;
+    line-height: 1.72;
+  }
+
+  .policy-list li:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ---------------------------------------------------------
+     INFORMATION CARDS — SECTION 3
+
+     Keep icon and text aligned, while making the text column
+     use all remaining width. Paragraphs inside one card use
+     the same fixed gap as normal policy paragraphs.
+  --------------------------------------------------------- */
+
+  .info-card {
+    display: flex;
+    align-items: flex-start;
+
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+
+    gap: 9px;
+    margin: 10px 0;
+    padding: 11px;
+  }
+
+  .info-icon {
+    flex: 0 0 37px;
+    width: 37px;
+    height: 37px;
+  }
+
+  .info-content {
+    min-width: 0;
+    flex: 1 1 auto;
+    width: 0;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info-card h3 {
+    width: 100%;
+    margin: 0 0 6px;
+    padding: 0;
+
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .info-card p,
+  .info-card p:last-child {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    font-size: 10.2px;
+    line-height: 1.68;
+  }
+
+  .info-card p + p {
+    margin-top: 12px;
+  }
+
+  .info-card .placeholder-text {
+    margin-top: 12px;
+    padding: 9px 10px;
+  }
+
+  /* ---------------------------------------------------------
+     CONTACT CARD
+  --------------------------------------------------------- */
+
+  .contact-card {
+    display: flex;
+    align-items: flex-start;
+
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .contact-logo {
+    flex: 0 0 48px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .contact-logo img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .contact-content {
+    min-width: 0;
+    flex: 1 1 auto;
+    width: 0;
+  }
+
+  .contact-content h3 {
+    margin: 0 0 6px;
+  }
+
+  .contact-content p {
+    margin: 0 0 9px;
+    font-size: 10.5px;
+    line-height: 1.65;
+  }
+
+  .contact-content p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL PHONES
+   Same structure, slightly tighter outer padding only.
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .policy-section {
+    grid-template-columns: 31px minmax(0, 1fr);
+    column-gap: 8px;
+    padding: 15px 9px;
+  }
+
+  .section-number {
+    width: 31px;
+    height: 31px;
+    min-width: 31px;
+  }
+
+  .policy-section h2 {
+    margin-bottom: 12px;
+    font-size: 13.5px;
+  }
+
+  .section-text {
+    gap: 14px;
+  }
+
+  .section-text p,
+  .section-text p:last-child {
+    font-size: 10.6px;
+    line-height: 1.78;
+  }
+
+  .section-body > .section-text + .section-text {
+    margin-top: 14px;
+  }
+
+  .info-card {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .info-card p,
+  .info-card p:last-child {
+    font-size: 9.9px;
+  }
+}

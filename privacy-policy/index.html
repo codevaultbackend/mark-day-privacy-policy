@@ -10,7 +10,7 @@
 
   <title>Privacy Policy | Mark Day</title>
 
-  <link rel="stylesheet" href="../css//style.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body id="top">
@@ -36,6 +36,12 @@
         <a href="#contact">Support</a>
       </nav>
 
+      <button class="mobile-menu-btn" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <a href="#contact" class="download-btn">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 3v10m0 0 4-4m-4 4-4-4M5 15v3a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3" />
@@ -45,6 +51,12 @@
 
     </div>
   </header>
+
+  <div class="mobile-nav" aria-hidden="true">
+    <a href="#top">Home</a>
+    <a href="#privacy-policy">Privacy Policy</a>
+    <a href="#contact">Support</a>
+  </div>
 
 
   <!-- ========================= HERO ========================= -->
@@ -127,9 +139,13 @@
         </nav>
       </div>
 
-      <div class="privacy-card">
+      <div class="privacy-card sidebar-privacy-card">
         <div class="privacy-card-icon">
-          <img src="../assets/privacy-icon.png" alt="">
+          <svg class="privacy-shield-svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path class="shield-main" d="M12 2.8L19.2 5.8V11.1C19.2 15.8 16.6 19.2 12 21.2C7.4 19.2 4.8 15.8 4.8 11.1V5.8L12 2.8Z"></path>
+  <path class="shield-inner" d="M12 5.2L16.8 7.2V11C16.8 14.3 15.1 16.8 12 18.4V5.2Z"></path>
+  <path class="shield-highlight" d="M7.2 7.3L10.4 6V16.7C8.2 15.2 7.2 13.2 7.2 10.8V7.3Z"></path>
+</svg>
         </div>
         <div>
           <h3>Your Privacy Matters</h3>
@@ -148,7 +164,8 @@
         <div class="section-body">
           <h2>1. Introduction</h2>
 
-          <p>
+          <div class="section-text">
+<p>
             Mark Day (“the App,” “we,” “us,” or “our”) is an attendance and leave
             management application developed and operated by Athratech
             (“Athratech,” “the Company”). This Privacy Policy explains what
@@ -163,6 +180,7 @@
             an organization that has deployed Mark Day (each, an “Employer”),
             and to administrators who manage the App on an Employer’s behalf.
           </p>
+</div>
         </div>
       </section>
 
@@ -172,7 +190,8 @@
         <div class="section-body">
           <h2>2. Employer as Data Controller; Athratech’s Role</h2>
 
-          <p>
+          <div class="section-text">
+<p>
             Mark Day is provided to organizations for use by their employees.
             As between Athratech and the Employer, the Employer determines the
             purposes and means of processing personal data collected through the
@@ -193,6 +212,7 @@
             not control, and is not responsible for, an Employer’s internal use
             of data obtained through the App.
           </p>
+</div>
         </div>
       </section>
 
@@ -369,30 +389,38 @@
         <div class="section-body">
           <h2>4. Consent and Legal Basis</h2>
 
-          <p>
+          <div class="section-text">
+<p>
             By creating an account or using Mark Day, you consent to the collection
             and use of your information as described in this Policy, to the extent
             required by applicable law.
           </p>
+</div>
 
-          <p>
+          <div class="section-text">
+<p>
             Where facial verification or location tracking is used, the App will
             request the relevant device permission before first use, and the
             feature will only operate if that permission is granted.
           </p>
+</div>
 
-          <p>
+          <div class="section-text">
+<p>
             You may withdraw consent by disabling the relevant permission in your
             device settings or by contacting your Employer’s administrator,
             though this may limit or disable certain App features.
           </p>
+</div>
 
-          <p>
+          <div class="section-text">
+<p>
             Where required by applicable data protection law, processing of personal
             data, and in particular biometric data, is carried out on the basis of
             consent obtained from the employee, or another applicable legal basis
             identified by the Employer as data controller.
           </p>
+</div>
         </div>
       </section>
 
@@ -428,25 +456,37 @@
         <div class="section-body">
           <h2>6. Biometric Data — Special Provisions</h2>
 
-          <p>Because facial verification involves sensitive biometric data, Athratech applies additional safeguards.</p>
-          <p>Facial verification is used solely for attendance identity verification and for no other purpose.</p>
+          <div class="section-text">
+<p>Because facial verification involves sensitive biometric data, Athratech applies additional safeguards.</p>
+</div>
+          <div class="section-text">
+<p>Facial verification is used solely for attendance identity verification and for no other purpose.</p>
+</div>
 
-          <p class="placeholder-text">
+          <div class="section-text">
+<p class="placeholder-text">
             Facial data is retained only for [retention period], after which it is
             deleted or irreversibly anonymized, unless a longer period is required
             by law or by the Employer’s written policy.
           </p>
+</div>
 
-          <p>Facial data is not used for profiling, advertising, or sale to third parties.</p>
+          <div class="section-text">
+<p>Facial data is not used for profiling, advertising, or sale to third parties.</p>
+</div>
 
-          <p class="placeholder-text">
+          <div class="section-text">
+<p class="placeholder-text">
             Facial data is stored using [describe security measures].
           </p>
+</div>
 
-          <p>
+          <div class="section-text">
+<p>
             Employees may request more information about, or object to, facial
             verification by contacting their Employer or Athratech.
           </p>
+</div>
         </div>
       </section>
 
@@ -456,10 +496,12 @@
         <div class="section-body">
           <h2>7. Data Sharing and Third-Party Service Providers</h2>
 
-          <p>
+          <div class="section-text">
+<p>
             Athratech does not sell personal data. Personal data may be shared
             in the following limited circumstances:
           </p>
+</div>
 
           <ul class="policy-list">
             <li>
@@ -496,26 +538,34 @@
         <div class="section-body">
           <h2>8. Data Retention</h2>
 
-          <p class="placeholder-text">
+          <div class="section-text">
+<p class="placeholder-text">
             Attendance and leave records are retained for [retention period],
             or as otherwise instructed by the Employer.
           </p>
+</div>
 
-          <p>
+          <div class="section-text">
+<p>
             Facial verification data is subject to the shorter retention period
             described in Section 6.
           </p>
+</div>
 
-          <p>
+          <div class="section-text">
+<p>
             Location data collected for attendance verification is retained only
             for as long as necessary to verify the relevant attendance event and
             for applicable record-keeping.
           </p>
+</div>
 
-          <p>
+          <div class="section-text">
+<p>
             Upon expiry of the applicable retention period, or upon a valid deletion
             request where applicable, data is securely deleted or anonymized.
           </p>
+</div>
         </div>
       </section>
 
@@ -525,27 +575,35 @@
         <div class="section-body">
           <h2>9. Data Security</h2>
 
-          <p>
+          <div class="section-text">
+<p>
             Athratech implements reasonable technical and organizational measures
             designed to protect personal data against unauthorized access,
             alteration, disclosure, or destruction.
           </p>
+</div>
 
-          <p>
+          <div class="section-text">
+<p>
             These measures include access controls, encryption of data in transit,
             and restricted internal access on a need-to-know basis.
           </p>
+</div>
 
-          <p>
+          <div class="section-text">
+<p>
             However, no method of transmission or storage is completely secure,
             and Athratech cannot guarantee absolute security.
           </p>
+</div>
 
-          <p>
+          <div class="section-text">
+<p>
             Users are responsible for keeping their login credentials confidential
             and for reporting any suspected unauthorized access to their Employer
             or Athratech promptly.
           </p>
+</div>
         </div>
       </section>
 
@@ -555,10 +613,12 @@
         <div class="section-body">
           <h2>10. Your Rights</h2>
 
-          <p>
+          <div class="section-text">
+<p>
             Subject to applicable law and to the Employer’s role as data controller,
             you may have the right to:
           </p>
+</div>
 
           <ul class="policy-list">
             <li>Request access to the personal data held about you.</li>
@@ -574,10 +634,12 @@
             <li>Raise a grievance regarding the handling of your personal data.</li>
           </ul>
 
-          <p>
+          <div class="section-text">
+<p>
             Requests should first be directed to your Employer’s administrator,
             who may coordinate with Athratech as needed.
           </p>
+</div>
         </div>
       </section>
 
@@ -587,13 +649,15 @@
         <div class="section-body">
           <h2>11. Children’s Privacy</h2>
 
-          <p>
+          <div class="section-text">
+<p>
             Mark Day is intended for use by employees of Employer organizations
             and is not directed to, or knowingly used by, children under the age
             of 18.
           </p>
 
           <p>Athratech does not knowingly collect personal data from children.</p>
+</div>
         </div>
       </section>
 
@@ -603,21 +667,27 @@
         <div class="section-body">
           <h2>12. International and Cross-Border Data Transfers</h2>
 
-          <p>
+          <div class="section-text">
+<p>
             Personal data collected through the App is stored and processed using
             cloud infrastructure provided by third-party hosting providers.
           </p>
+</div>
 
-          <p class="placeholder-text">
+          <div class="section-text">
+<p class="placeholder-text">
             [Confirm actual hosting providers and applicable locations before publication.]
           </p>
+</div>
 
-          <p>
+          <div class="section-text">
+<p>
             Where personal data is transferred to or processed in a jurisdiction
             other than the user's home country, Athratech takes reasonable steps
             required by applicable law to ensure the data continues to receive
             an adequate level of protection.
           </p>
+</div>
         </div>
       </section>
 
@@ -627,10 +697,12 @@
         <div class="section-body">
           <h2>13. Grievance Officer and Contact Us</h2>
 
-          <p>
+          <div class="section-text">
+<p>
             If you have any questions, concerns, or requests regarding this
             Privacy Policy or the handling of your personal data, please contact:
           </p>
+</div>
 
           <div class="contact-card">
             <div class="contact-logo">
@@ -671,20 +743,26 @@
         <div class="section-body">
           <h2>14. Changes to This Privacy Policy</h2>
 
-          <p>
+          <div class="section-text">
+<p>
             This Privacy Policy may be updated from time to time to reflect
             changes to the Mark Day application, its functionality, or applicable law.
           </p>
+</div>
 
-          <p>
+          <div class="section-text">
+<p>
             The “Last Updated” date at the top of this Policy indicates when
             it was last revised.
           </p>
+</div>
 
-          <p>
+          <div class="section-text">
+<p>
             Material changes will be notified to Employers and/or users through
             the App or other reasonable means.
           </p>
+</div>
         </div>
       </section>
 
@@ -694,15 +772,31 @@
         <div class="section-body">
           <h2>15. Governing Law</h2>
 
-          <p class="placeholder-text">
+          <div class="section-text">
+<p class="placeholder-text">
             This Privacy Policy is governed by the laws of [jurisdiction],
             without regard to conflict-of-law principles, and subject to the
             exclusive jurisdiction of the courts located in [city, state].
           </p>
+</div>
         </div>
       </section>
 
     </article>
+
+    <div class="privacy-card mobile-privacy-card">
+      <div class="privacy-card-icon">
+        <svg class="privacy-shield-svg" viewBox="0 0 24 24" aria-hidden="true">
+  <path class="shield-main" d="M12 2.8L19.2 5.8V11.1C19.2 15.8 16.6 19.2 12 21.2C7.4 19.2 4.8 15.8 4.8 11.1V5.8L12 2.8Z"></path>
+  <path class="shield-inner" d="M12 5.2L16.8 7.2V11C16.8 14.3 15.1 16.8 12 18.4V5.2Z"></path>
+  <path class="shield-highlight" d="M7.2 7.3L10.4 6V16.7C8.2 15.2 7.2 13.2 7.2 10.8V7.3Z"></path>
+</svg>
+      </div>
+      <div>
+        <h3>Your Privacy Matters</h3>
+        <p>We are committed to keeping your information safe and secure.</p>
+      </div>
+    </div>
   </main>
 
 
@@ -753,23 +847,95 @@
 
   <script>
     (() => {
-      const button = document.querySelector(".toc-toggle");
-      const nav = document.querySelector("#toc-nav");
+      const tocButton = document.querySelector(".toc-toggle");
+      const tocNav = document.querySelector("#toc-nav");
+      const mobileMenuButton = document.querySelector(".mobile-menu-btn");
+      const mobileNav = document.querySelector(".mobile-nav");
+      const policySections = document.querySelectorAll(".policy-section");
 
-      if (!button || !nav) return;
+      if (tocButton && tocNav) {
+        tocButton.addEventListener("click", () => {
+          const isOpen = tocButton.getAttribute("aria-expanded") === "true";
+          tocButton.setAttribute("aria-expanded", String(!isOpen));
+          tocNav.classList.toggle("open", !isOpen);
+        });
 
-      button.addEventListener("click", () => {
-        const isOpen = button.getAttribute("aria-expanded") === "true";
-        button.setAttribute("aria-expanded", String(!isOpen));
-        nav.classList.toggle("open", !isOpen);
-      });
+        tocNav.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            tocButton.setAttribute("aria-expanded", "false");
+            tocNav.classList.remove("open");
+          });
+        });
+      }
 
-      nav.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-          button.setAttribute("aria-expanded", "false");
-          nav.classList.remove("open");
+      if (mobileMenuButton && mobileNav) {
+        mobileMenuButton.addEventListener("click", () => {
+          const isOpen = mobileMenuButton.getAttribute("aria-expanded") === "true";
+          mobileMenuButton.setAttribute("aria-expanded", String(!isOpen));
+          mobileNav.classList.toggle("open", !isOpen);
+          mobileNav.setAttribute("aria-hidden", String(isOpen));
+        });
+
+        mobileNav.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileMenuButton.setAttribute("aria-expanded", "false");
+            mobileNav.classList.remove("open");
+            mobileNav.setAttribute("aria-hidden", "true");
+          });
+        });
+      }
+
+      const setupMobilePolicy = () => {
+        const isMobile = window.matchMedia("(max-width: 620px)").matches;
+
+        policySections.forEach((section, index) => {
+          if (isMobile) {
+            // On first mobile load, keep only the first section open.
+            // Every section (including Introduction) can be opened/closed by the user.
+            if (!section.dataset.mobileInitialized) {
+              section.classList.toggle("mobile-collapsed", index !== 0);
+              section.classList.toggle("mobile-open", index === 0);
+              section.dataset.mobileInitialized = "true";
+            }
+          } else {
+            section.classList.remove("mobile-collapsed", "mobile-open");
+            delete section.dataset.mobileInitialized;
+          }
+        });
+      };
+
+      policySections.forEach((section) => {
+        const heading = section.querySelector("h2");
+        if (!heading) return;
+
+        heading.setAttribute("tabindex", "0");
+        heading.setAttribute("role", "button");
+        heading.setAttribute("aria-expanded", "true");
+
+        const updateAria = () => {
+          const collapsed = section.classList.contains("mobile-collapsed");
+          heading.setAttribute("aria-expanded", collapsed ? "false" : "true");
+        };
+
+        heading.addEventListener("click", () => {
+          if (!window.matchMedia("(max-width: 620px)").matches) return;
+
+          const willCollapse = !section.classList.contains("mobile-collapsed");
+
+          section.classList.toggle("mobile-collapsed", willCollapse);
+          section.classList.toggle("mobile-open", !willCollapse);
+          updateAria();
+        });
+
+        heading.addEventListener("keydown", (event) => {
+          if (event.key !== "Enter" && event.key !== " ") return;
+          event.preventDefault();
+          heading.click();
         });
       });
+
+      setupMobilePolicy();
+      window.addEventListener("resize", setupMobilePolicy);
     })();
   </script>
 
